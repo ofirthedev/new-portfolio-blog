@@ -1,0 +1,242 @@
+
+.blog{
+  direction: rtl;
+  overflow-x: hidden;
+}
+html {
+  scroll-behavior: smooth;
+}
+.MuiButton-root {
+  text-transform: capitalize !important;
+}
+.monsterBg {
+  height: 135px;
+  width: 135px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+}
+#home,
+#about,
+#work,
+#contact {
+  padding: 20px;
+}
+.appBar {
+  text-transform: capitalize !important;
+  position: absolute;
+  padding-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.MuiCardActions-root {
+  padding: 0;
+}
+.astronaut,
+.taken,
+.sit {
+  height: 65vh;
+  width: auto;
+}
+.takenMobile {
+  height: 53vh;
+  width: auto;
+}
+.sitmobile {
+  height: 60vh;
+  width: auto;
+}
+/*cards*/
+.cards {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.card-body h5 {
+  position: absolute;
+  bottom: 4%;
+  width: 100%;
+}
+.card {
+  position: relative;
+  width: 20em;
+  height: 380px;
+  border-radius: 0.6em;
+  margin: 1em;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 13px 27px -5px hsla(240, 30.1%, 28%, 0.25),
+    0 8px 16px -8px hsla(0, 0%, 0%, 0.3), 0 -6px 16px -6px hsla(0, 0%, 0%, 0.03);
+  transition: all ease 200ms;
+}
+
+.card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 13px 40px -5px hsla(240, 30.1%, 28%, 0.12),
+    0 8px 32px -8px hsla(0, 0%, 0%, 0.14),
+    0 -6px 32px -6px hsla(0, 0%, 0%, 0.02);
+}
+
+.card img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.card h2 {
+  color: #222;
+  margin-top: -0.2em;
+  line-height: 1.4;
+  font-size: 1.3em;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  transition: all ease-in 100ms;
+}
+
+.card p {
+  color: #777;
+}
+
+.card h5 {
+  color: #bbb;
+  font-weight: 700;
+  font-size: 0.7em;
+  letter-spacing: 0.04em;
+  margin: 1.4em 0 0 0;
+  text-transform: uppercase;
+}
+
+.card-body > h2,
+.card-body > p {
+  padding-top: 1.2em;
+  padding-left: 1.2em;
+  padding-right: 1.2em;
+}
+/*end card*/
+.MuiCard-root {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.workGrid {
+  padding-top: 20px;
+}
+.contactGrid {
+  padding-top: 20px;
+}
+.aboutgrid {
+  height: 95vh;
+}
+a {
+  text-decoration: none;
+  color: initial;
+}
+.moon {
+  left: 0;
+  margin: 20px;
+  position: absolute;
+  height: 25vh;
+}
+.homeGrid {
+  height: 100vh;
+}
+.footer {
+  /*color: #afc0e0;*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /*background-color: #f9f9f9;*/
+}
+.mobileapp svg {
+  font-size: 2em;
+}
+.mobileapp {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.wbimg {
+  height: 40vh;
+  width: auto;
+}
+.welcome {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+}
+/*FLOAT BUTTON TO TOP*/
+#button {
+  display: none;
+
+  background-color: #e6e6e6;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  left: 10px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  z-index: 1000;
+}
+#work {
+  /*background-color: #f9f9f9;*/
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #cecece;
+}
+#button:active {
+  background-color: #555;
+}
+#button.show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aboutText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contactText {
+  padding-bottom: 20px;
+  justify-content: center;
+}
+@media (min-width: 500px) {
+  #button {
+    margin: 30px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .homeText {
+    padding-top: 70px;
+  }
+  .aboutText {
+    padding-top: 45px;
+    padding-bottom: 45px;
+  }
+}
+.MuiCircularProgress-colorPrimary {
+  color: #ffc170 !important;
+}
+
+.monsterProfile {
+  width: 9em;
+  height: auto;
+}
+.monster {
+  width: 7em;
+  height: auto;
+}
+.loadingScreen {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}

@@ -1,0 +1,29 @@
+
+body {
+  margin: 0;
+  font-family: Tahoma;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.blogPostContent{
+  padding-right: 20px;
+  padding-top: 5%;
+flex-direction: column;
+  display: flex;
+  position: absolute;
+  justify-content: start;
+  align-items: start;
+}
+.postBody{
+  font-size: 16px;
+
+}
+.postFooter{
+  bottom: 2%;
+  position: absolute;
+  /* width: 95%; */
+  right: 2%;
+}
