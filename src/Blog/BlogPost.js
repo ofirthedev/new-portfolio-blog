@@ -2,23 +2,15 @@ import {React , useEffect,useState} from 'react';
 import {Link, useParams} from 'react-router-dom';
 import firebase from "firebase/compat";
 import {getFirestore} from "firebase/firestore/lite";
-import moment from "moment";
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
-import Typography from "@material-ui/core/Typography";
 import NotFound from './NotFound';
 import KeyboardReturnIcon from "@material-ui/icons/KeyboardReturn";
-import Box from "@material-ui/core/Box";
-import Container from "@material-ui/core/Container";
-import Grid from "@material-ui/core/Grid";
-import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardMedia from "@material-ui/core/CardMedia";
-import CardContent from "@material-ui/core/CardContent";
-import CardActions from "@material-ui/core/CardActions";
-import Avatar from "@material-ui/core/Avatar";
-import BookmarkBorderIcon from "@material-ui/icons/BookmarkBorder";
-import Pagination from "@material-ui/lab/Pagination";
+import WhatsApp from '../svgs/whatsapp.svg';
+import Facebook from '../svgs/facebook.svg';
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import InstagramIcon from "@material-ui/icons/Instagram";
+import FacebookIcon from "@material-ui/icons/Facebook";
 import {makeStyles} from "@material-ui/core/styles";
 const firebaseConfig = {
     apiKey: "AIzaSyBrjpqZDPafJKS8S4FzG5A-9hqoR3trrFo",
@@ -74,6 +66,12 @@ const useStyles = makeStyles((theme) => ({
         margin: "0 10px",
         justifyContent: "space-between"
     },
+    h4:{
+      color:'black'
+    },
+    arrow:{
+      color:'black'
+    },
     author: {
         display: "flex"
     },
@@ -101,36 +99,66 @@ const useStyles = makeStyles((theme) => ({
     // GetPostDataById(id);
      return (
       postData && postData.id ? (
-             <div className="blog" >
+             <div className="blog " >
                  <AppBar className={classes.appBar} position="static">
                      <div>
                          <Toolbar>
-                             <Typography variant="h6" color="primary" >
+                             <h4 className={classes.h4}>
                                  Ofir The Freelancer
-                             </Typography>
+                             </h4>
                          </Toolbar>
                      </div>
                      <div >
                          <Link to ='/blog'>
-                             <KeyboardReturnIcon fontSize="large" color="primary"/>
+                             <KeyboardReturnIcon fontSize="large" className={classes.arrow}/>
                          </Link>
                      </div>
                  </AppBar>
-                 <div className="blogPostContent">
+                 <div className="postArticle">
+                     <div className="blogPostContent">
 
-                                 <div className="postHeader">
-                                   <h1>{postData.postTitle}</h1>
+                         <div className="postHeader">
+                             <h1>{postData.postTitle}</h1>
+                         </div>
+                         <div className="postDesc">
+                             <h3>{postData.postDesc}</h3>
+                         </div>
+                         <div className="writtenAt">
+                            נכתב בתאריך {postData.postTimestamp}
+                         </div>
+                         <div className="postBody" dangerouslySetInnerHTML={{__html: postData.postBody}}>
+                         </div>
+                         <div className="postFooter">
+                             <h5>
+                                 אשמח אם תשתפו (:
+                             </h5>
+                             <div className="share">
+                                 <div className="whatsapp">
+                                <img alt="whatsapp" src={WhatsApp} height="40"/>
                                  </div>
-                                 <div className="postBody">
-                                     {postData.postBody}
+                                 <div className="facebook">
+                                     <img alt="facebook" src={Facebook} height="40"/>
                                  </div>
+                             </div>
+                         </div>
+                         <br/>
+                         <hr/>
+                         <br/>
+                         <div className="visitMe">
+                             <a href="https://www.linkedin.com/in/ofirthedev/">
+                                 <LinkedInIcon fontSize="large"   />
+                             </a>
+                             <a href="https://www.facebook.com/profile.php?id=100004539256630">
+                                 <FacebookIcon fontSize="large"   />
+                             </a>
+                             <a href="https://www.instagram.com/ofirthefreelancer/">
+                                 <InstagramIcon fontSize="large" />
+                             </a>
+                         </div>
+                     </div>
 
                  </div>
-                 <div className="postFooter">
-                     <h5>
-                         נוצר על ידי {postData.postAuthor}  בתאריך {moment(Number(postData.postTimestamp)).format()}
-                     </h5>
-                 </div>
+
              </div>
       ) : (<NotFound/>)
     )

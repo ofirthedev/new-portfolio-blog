@@ -1,0 +1,45 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="CssInvalidPropertyValue" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="DuplicatedCode" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <Languages>
+        <language minSize="79" name="PHP" />
+      </Languages>
+    </inspection_tool>
+    <inspection_tool class="HtmlDeprecatedTag" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="PhpAbstractStaticMethodInspection" enabled="true" level="ERROR" enabled_by_default="true" />
+    <inspection_tool class="PhpComposerExtensionStubsInspection" enabled="false" level="INFORMATION" enabled_by_default="false" />
+    <inspection_tool class="PhpElementIsNotAvailableInCurrentPhpVersionInspection" enabled="false" level="ERROR" enabled_by_default="false" />
+    <inspection_tool class="PhpExpressionWithoutClarifyingParenthesesInspection" enabled="false" level="INFORMATION" enabled_by_default="false" />
+    <inspection_tool class="PhpForeachNestedOuterKeyValueVariablesConflictInspection" enabled="true" level="ERROR" enabled_by_default="true" />
+    <inspection_tool class="PhpFullyQualifiedNameUsageInspection" enabled="true" level="INFORMATION" enabled_by_default="true" />
+    <inspection_tool class="PhpIllegalArrayKeyTypeInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="PhpIncludeInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+    <inspection_tool class="PhpInstanceofIsAlwaysTrueInspection" enabled="false" level="WEAK WARNING" enabled_by_default="false" />
+    <inspection_tool class="PhpMethodOrClassCallIsNotCaseSensitiveInspection" enabled="true" level="ERROR" enabled_by_default="true" />
+    <inspection_tool class="PhpMissingReturnTypeInspection" enabled="true" level="INFORMATION" enabled_by_default="true" />
+    <inspection_tool class="PhpSignatureMismatchDuringInheritanceInspection" enabled="true" level="ERROR" enabled_by_default="true" />
+    <inspection_tool class="PhpUndefinedClassInspection" enabled="true" level="ERROR" enabled_by_default="true" />
+    <inspection_tool class="PhpUndefinedConstantInspection" enabled="true" level="ERROR" enabled_by_default="true" />
+    <inspection_tool class="PhpUndefinedFunctionInspection" enabled="true" level="ERROR" enabled_by_default="true" />
+    <inspection_tool class="PhpUndefinedMethodInspection" enabled="true" level="ERROR" enabled_by_default="true" />
+    <inspection_tool class="PhpUnused" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="SUPPRESS_GETTERS_AND_SETTERS" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PhpUnusedParameterInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="DONT_REPORT_ANONYMOUS" value="true" />
+    </inspection_tool>
+    <inspection_tool class="SpellCheckingInspection" enabled="true" level="TYPO" enabled_by_default="true">
+      <option name="processCode" value="true" />
+      <option name="processLiterals" value="false" />
+      <option name="processComments" value="false" />
+    </inspection_tool>
+    <inspection_tool class="SqlDialectInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+    <inspection_tool class="SqlErrorHandlingInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="SqlGotoInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="SqlMissingColumnAliasesInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="SqlNamedArgumentsInspection" enabled="true" level="WARNING" enabled_by_default="true" />
+    <inspection_tool class="SqlResolveInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true" />
+  </profile>
+</component>

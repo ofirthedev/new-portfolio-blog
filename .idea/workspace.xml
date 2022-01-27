@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f8317c56-18a2-4747-a94f-5eba10f95394" name="Changes" comment="dsffdfd">
+      <change afterPath="$PROJECT_DIR$/src/Blog/BlogEx.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Blog/Blog.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blog/Blog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Blog/Blog.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blog/Blog.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Blog/BlogPost.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blog/BlogPost.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Blog/NotFound.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blog/NotFound.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Blog/NotFound.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Blog/NotFound.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/AppBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/AppBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/HomePageView.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/HomePageView.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
+  <component name="ProjectId" id="24BUDS5wm8ieU0mXiFdvUyOCmnm" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
+    <property name="ts.external.directory.path" value="C:\Users\ofirc\AppData\Local\JetBrains\Toolbox\apps\PhpStorm\ch-0\212.5080.71\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ofirc\Desktop\ofirthefreelancer\new-portfolio\src\Blog" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f8317c56-18a2-4747-a94f-5eba10f95394" name="Changes" comment="" />
+      <created>1643103356702</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1643103356702</updated>
+      <workItem from="1643103358433" duration="33323000" />
+      <workItem from="1643271345665" duration="703000" />
+      <workItem from="1643272056961" duration="8390000" />
+    </task>
+    <task id="LOCAL‎00001" summary="dsffdfd">
+      <created>1643202950142</created>
+      <option name="number" value="LOCAL‎00001" />
+      <option name="presentableId" value="LOCAL‎00001" />
+      <updated>1643202950142</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="dsffdfd" />
+    <option name="LAST_COMMIT_MESSAGE" value="dsffdfd" />
+  </component>
+</project>

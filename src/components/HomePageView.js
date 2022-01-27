@@ -7,10 +7,14 @@ import About from "./About";
 import Work from "./Work";
 import Contact from "./Contact";
 import Footer from "./Footer";
+
 import React, {useState} from "react";
 import {darkTheme, lightTheme} from "./themes";
 
+
+
 function HomePageView(){
+
     const [appTheme, setAppTheme] = useState(lightTheme);
 
     const darkHandler = (state) => {
@@ -18,7 +22,7 @@ function HomePageView(){
     };
 
     return (
-        <React.Fragment>
+        <React.Fragment >
             <AppBar />
             <ScrollToTop smooth color="#6f00ff" top="400" />
 

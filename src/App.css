@@ -1,10 +1,13 @@
 
 .blog{
-  direction: rtl;
   overflow-x: hidden;
 }
 html {
   scroll-behavior: smooth;
+
+}
+.textCenter{
+  text-align: center !important;
 }
 .MuiButton-root {
   text-transform: capitalize !important;
@@ -23,6 +26,9 @@ html {
 #work,
 #contact {
   padding: 20px;
+}
+.App{
+  text-align: center;
 }
 .appBar {
   text-transform: capitalize !important;

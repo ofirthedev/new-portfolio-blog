@@ -7,6 +7,7 @@ import  BlogPost   from '../src/Blog/BlogPost';
 import NotFound from './Blog/NotFound';
 import LoadingScreen from "./components/LoadingScreen";
 import HomePageView from "./components/HomePageView";
+
 function App() {
 
 

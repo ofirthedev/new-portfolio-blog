@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from "react-router-dom";
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
@@ -7,21 +8,18 @@ import Box from '@material-ui/core/Box';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import {Link} from 'react-router-dom';
-import axios from 'axios';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardMedia from '@material-ui/core/CardMedia';
 import CardContent from '@material-ui/core/CardContent';
 import Avatar from '@material-ui/core/Avatar';
-import BookmarkBorderIcon from '@material-ui/icons/BookmarkBorder';
 import Pagination from '@material-ui/lab/Pagination';
 import KeyboardReturnIcon from '@material-ui/icons/KeyboardReturn';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
-import moment from 'moment';
 import 'firebase/compat/firestore';
-import { getFirestore, collection, query, getDocs } from 'firebase/firestore/lite'
+import { getFirestore } from 'firebase/firestore/lite'
 
 
 const useStyles = makeStyles((theme) => ({
@@ -76,6 +74,25 @@ const useStyles = makeStyles((theme) => ({
     margin: "0 10px",
     justifyContent: "space-between"
   },
+  h4:{
+    color:'black'
+  },
+  arrow:{
+    color:'black'
+  },
+  card:{
+    // Provide some spacing between cards
+    margin: 16,
+
+    // Use flex layout with column direction for components in the card
+    // (CardContent and CardActions)
+    display: "flex",
+    flexDirection: "column",
+
+    // Justify the content so that CardContent will always be at the top of the card,
+    // and CardActions will be at the bottom
+    justifyContent: "space-between"
+  },
   author: {
     display: "flex",
       paddingLeft:'10px',
@@ -109,43 +126,45 @@ async function getPosts() {
       });
   }
 getPosts();
-
  function Blog() {
    console.log('blog')
+   const history = useNavigate();
 
+   function navigateToPost(id) {
+     history(`/blog/post/${id}`);
+   }
  // const posts = await getPosts();
  // console.log(posts)
   const classes = useStyles();
   return (
     <div className="blog">
       <AppBar className={classes.appBar} position="static">
-       <div>
-         <Toolbar>
-           <Typography variant="h6" color="primary" >
-             Ofir The Freelancer
-           </Typography>
-         </Toolbar>
-       </div>
+        <div>
+          <Toolbar>
+            <h4 className={classes.h4}>
+              Ofir The Freelancer
+            </h4>
+          </Toolbar>
+        </div>
         <div >
-           <Link to ='/'>
-             <KeyboardReturnIcon fontSize="large" color="primary"/>
-           </Link>
+          <Link to ='/'>
+            <KeyboardReturnIcon fontSize="large" className={classes.arrow}/>
+          </Link>
         </div>
       </AppBar>
       <Box className={classes.hero}>
-        <Box>ברוכים הבאים</Box>
+        <Box>&lt; ברוכים הבאים /&gt;</Box>
       </Box>
       <Container maxWidth="lg" className={classes.blogsContainer}>
-        <Typography variant="h4" className={classes.blogTitle}>
+        <h2 className={classes.blogTitle}>
           מאמרים
-        </Typography>
+        </h2>
           {postData.length > 0 ? (
-              <Grid container spacing={3}>
+              <Grid  spacing={3}  container alignItems="stretch">
                   {postData.map((post)=>{
                       return (
-                          <Grid item xs={12} sm={6} md={4} key={post.postId}>
-                              <Link to={`/blog/post/${post.id}`} >
-                                  <Card className={classes.card}>
+                          <Grid item xs={12} sm={6} md={4} key={post.postId} className={classes.card} >
+                                  <Card style={{ height: '100%' }} onClick={() =>{navigateToPost(post.id)}}>
                                       <CardActionArea>
                                           <CardMedia
                                               className={classes.media}
@@ -164,18 +183,16 @@ getPosts();
                                           <Box className={classes.author}>
                                               <Avatar src={post.authAvatar} />
                                               <Box ml={2} className={classes.authDetail}>
-                                                  <Typography variant="subtitle2" component="p">
+                                                  <div className="author"   component="p">
                                                       {post.postAuthor}
-                                                  </Typography>
-                                                  <Typography variant="subtitle2" color="textSecondary" component="p">
-                                                      {moment(Number(post.postTimestamp)).format()}
-                                                  </Typography>
+                                                  </div>
+                                                  <div className="timestamp"  component="p">
+                                                      {post.postTimestamp}
+                                                  </div>
                                               </Box>
                                           </Box>
-
                                       </CardActions>
                                   </Card>
-                              </Link>
                           </Grid>
                       )
                   })}

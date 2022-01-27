@@ -1,29 +1,101 @@
-
+@font-face {
+  font-family: "OpenSansHebrewLight";
+  src: URL('../fonts/OpenSansHebrew-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: "OpenSansHebrew";
+  src: URL('../fonts/OpenSansHebrew-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: "OpenSansHebrewBold";
+  src: URL('../fonts/OpenSansHebrew-Bold.ttf') format('truetype');
+}
 body {
   margin: 0;
-  font-family: Tahoma;
+  font-size: 1.3rem;
+  font-family: "OpenSansHebrew";
+  color: rgba(0,0,0,.8);
 }
+.MuiCard-root.same-height {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.postArticle{
+  display: flex;
+  justify-content: center;
+}
+.visitMe{
+  display: flex;
+  width: 100%;
+  justify-content: end;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+}
+hr{
+
+  width:100%;
+}
+.facebook{
+  padding-right: 10px;
+}
+.share{
+  display: flex;
+}
+.timestamp{
+  font-size:0.9rem;
+}
+.author{
+  font-size:0.9rem;
+}
+.blog{
+  direction: rtl;
+  text-align: right;
 }
 .blogPostContent{
   padding-right: 20px;
   padding-top: 5%;
 flex-direction: column;
+  width: 55%;
   display: flex;
   position: absolute;
   justify-content: start;
   align-items: start;
 }
-.postBody{
-  font-size: 16px;
-
+.p{
+  line-height: 3.2rem;
+  font-size: 2.1rem;
 }
 .postFooter{
-  bottom: 2%;
-  position: absolute;
-  /* width: 95%; */
-  right: 2%;
+
+}
+h1{
+  line-height: 1.2;
+  font-size: 3rem;
+  color:black;
+  font-family: "OpenSansHebrewBold";
+}
+h2{
+  font-size: 1.7rem;
+  line-height: 1.4;
+  display: block;
+
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+h3{
+  display: block;
+  font-size: 1.2em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  font-family: OpenSansHebrew;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  color: rgb(117, 117, 117);
 }
