@@ -126,7 +126,7 @@ async function getPosts() {
       });
   }
 getPosts();
- function Blog() {
+  function Blog() {
    console.log('blog')
    const history = useNavigate();
 
@@ -174,9 +174,9 @@ getPosts();
                                               <Typography gutterBottom variant="h5" component="h2">
                                                   {post.postTitle}
                                               </Typography>
-                                              <Typography variant="body2" color="textSecondary" component="p">
+                                              <h3   component="p">
                                                   {post.postDesc}
-                                              </Typography>
+                                              </h3>
                                           </CardContent>
                                       </CardActionArea>
                                       <CardActions className={classes.cardActions}>

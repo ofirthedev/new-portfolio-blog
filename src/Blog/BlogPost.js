@@ -81,6 +81,8 @@ const useStyles = makeStyles((theme) => ({
     }
 }));
  function BlogPost(props){
+     const hrefWhatsapp = `whatsapp://send?text=${window.location.href}`;
+     const hrefFacebook = `http://www.facebook.com/share.php?u=${window.location.href}`;
      const { id } = useParams();
 
      let [postData,setPostData] = useState({});
@@ -134,10 +136,14 @@ const useStyles = makeStyles((theme) => ({
                              </h5>
                              <div className="share">
                                  <div className="whatsapp">
+                               <a href={hrefWhatsapp} data-action="share/whatsapp/share">
                                 <img alt="whatsapp" src={WhatsApp} height="40"/>
+                               </a>
                                  </div>
                                  <div className="facebook">
+                                     <a href={hrefFacebook} >
                                      <img alt="facebook" src={Facebook} height="40"/>
+                                     </a>
                                  </div>
                              </div>
                          </div>
