@@ -103,7 +103,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center"
   }
 }));
-let postData = [];
+
 const firebaseConfig = {
   apiKey: "AIzaSyBrjpqZDPafJKS8S4FzG5A-9hqoR3trrFo",
   authDomain: "portfolio-blogger.firebaseapp.com",
@@ -113,17 +113,20 @@ const firebaseConfig = {
   appId: "1:805454355057:web:4ade5dd5f02a33e927d9d0"
 };
 
-
+let postData = {};
+let postOutPut = [];
 // Get a list of cities from your database
 async function getPosts() {
-  postData = [];
+   postData = {};
+   postOutPut = [];
     // get posts collection
       const firebaseApp=await firebase.initializeApp(firebaseConfig);
       const db=await firebase.firestore();
         const firestore = await getFirestore()
       return db.collection('posts').onSnapshot((snapshot) => {
-        snapshot.forEach((doc) => postData.push({ ...doc.data(), id: doc.id }));
-        console.log(postData);  // <------
+        snapshot.forEach((doc) => postData[doc.id] = { ...doc.data(), id: doc.id });
+        Object.keys(postData).forEach((doc) => postOutPut.push({ ...postData[doc], id: doc }));
+        console.log(postOutPut);  // <------
       });
   }
 getPosts();
@@ -160,12 +163,12 @@ getPosts();
         <h2 className={classes.blogTitle}>
           מאמרים
         </h2>
-          {postData.length > 0 ? (
+          {postOutPut.length > 0 ? (
               <Grid  spacing={3}  container alignItems="stretch">
-                  {postData.map((post)=>{
+                  {postOutPut.map((post)=>{
                       return (
                           <Grid item xs={12} sm={6} md={4} key={post.postId} className={classes.card} >
-                                  <Card style={{ height: '100%' }} onClick={() =>{navigateToPost(post.id)}}>
+                                  <Card key={post.postId} style={{ height: '100%' }} onClick={() =>{navigateToPost(post.id)}}>
                                       <CardActionArea>
                                           <CardMedia
                                               className={classes.media}
