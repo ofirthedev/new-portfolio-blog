@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
 import Button from "@material-ui/core/Button";
-
+import {Link} from 'react-router-dom'
 import Drawer from "./Drawer";
 import Bounce from "react-reveal/Bounce";
 import Hidden from "@material-ui/core/Hidden";
@@ -43,11 +43,11 @@ export default function ButtonAppBar() {
               <Button href="#contact" color="inherit" size="large">
                 Contact
               </Button>
-           {/*   <Button  color="inherit" size="large">
+              <Button  color="inherit" size="large">
                 <Link to="/blog" color="inherit" size="large">
                   Blog
                 </Link>
-              </Button>*/}
+              </Button>
 
             </div>
           </div>
